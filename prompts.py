@@ -1,10 +1,14 @@
 import os
 from crewai import Agent, Task, Crew, Process
 from crewai_tools import SerperDevTool
+from crewai_tools import DOCXSearchTool
 from langchain_openai import ChatOpenAI
 import ollama
 
 search_tool = SerperDevTool()
+
+# with open('Oferta - Test 1.docx', 'r') as file:
+#     data = file.readlines()
 
 # agents definition
 
@@ -30,11 +34,21 @@ writer = Agent(
     llm=ChatOpenAI(model_name='gpt-3.5-turbo-instruct', temperature=0.7)
 )
 
+i = 1
+tool = ''
+try:
+    while i:
+        tool = DOCXSearchTool(docx=f'Oferta - Test {i}.docx')
+        i += 1
+except Exception as e:
+    print('nu mai am documente', e)
+
 task1 = Task(
     description='Conduct comprehensive analysis of the latest advanced tech in AI. Identify key trends, breakthrough '
                 'technologies and potential industry disruptors',
     expected_output='full analysis report in bullet points',
-    agent=researcher
+    agent=researcher,
+    tool=tool
 )
 
 task2 = Task(
