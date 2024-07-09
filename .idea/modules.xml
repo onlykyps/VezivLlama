@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/VezivLlama.iml" filepath="$PROJECT_DIR$/.idea/VezivLlama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/VezivAIOffers.iml" filepath="$PROJECT_DIR$/.idea/VezivAIOffers.iml" />
     </modules>
   </component>
 </project>

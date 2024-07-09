@@ -13,8 +13,8 @@ search_tool = SerperDevTool()
 # agents definition
 
 researcher = Agent(
-    role='Senior Research Assistant',
-    goal='Look up the latest advancements in AI agents',
+    role='Sales representative',
+    goal='Develop ',
     backstory='You work at a leading tech think tank. Your expertise lies in identifying emerging trends. You have a '
               'knack for dissecting complex data and presenting it as actionable insights',
     verbose=False,
